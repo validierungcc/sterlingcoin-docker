@@ -1,6 +1,4 @@
 FROM ubuntu:18.04 AS builder
-COPY  --from=lncm/berkeleydb:v4.8.30.NC  /opt  /opt
-ENV BDB_PREFIX="/opt/db4"
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
