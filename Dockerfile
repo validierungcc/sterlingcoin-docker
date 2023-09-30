@@ -8,17 +8,11 @@ RUN apt-get update && \
         git \
         make \
         g++ \
-        autoconf \
-        automake \
-        libtool \
-        pkg-config \
         libboost-all-dev \
         libdb++-dev \
-        libevent-dev \
         libssl-dev \
         libminiupnpc-dev \
-        ca-certificates \
-        bsdmainutils
+        ca-certificates
 
 RUN addgroup --gid 1000 sterling && \
     adduser --disabled-password --gecos "" --home /sterling --ingroup sterling --uid 1000 sterling
@@ -37,7 +31,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         libboost-all-dev \
-        libevent-dev \
+        libdb++-dev \
+        libminiupnpc-dev \
         libssl-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*

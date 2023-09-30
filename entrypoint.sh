@@ -2,7 +2,7 @@
 set -meuo pipefail
 
 STERLINGCOIN_DIR=/sterling/.sterlingcoin/
-STERLINGCOIN_CONF=/sterling/.sterlingcoin/eMark.conf
+STERLINGCOIN_CONF=/sterling/.sterlingcoin/sterlingcoin.conf
 
 if [ -z "${STERLINGCOIN_RPCPASSWORD:-}" ]; then
   # Provide a random password.
@@ -20,7 +20,7 @@ echo "Created new configuration at ${STERLINGCOIN_CONF}"
 fi
 
 if [ $# -eq 0 ]; then
-  /sterling/sterlingcoin/src/sterlingcoind -rpcbind=:11886 -rpcallowip=* -printtoconsole=1
+  /usr/local/bin/sterlingcoind -rpcbind=:11886 -rpcallowip=* -printtoconsole=1
 else
   exec "$@"
 fi
