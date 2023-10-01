@@ -20,7 +20,7 @@ echo "Created new configuration at ${STERLINGCOIN_CONF}"
 fi
 
 if [ $# -eq 0 ]; then
-  /usr/local/bin/sterlingcoind -rpcbind=0.0.0.0 -rpcport=11886 -rpcallowip=* -printtoconsole=1
+  /usr/local/bin/sterlingcoind -rpcbind=0.0.0.0 -rpcport=8311 -rpcallowip=* -printtoconsole=1
 else
   exec "$@"
 fi
