@@ -46,6 +46,6 @@ RUN mkdir .sterlingcoin
 VOLUME /sterling/.sterlingcoin
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-EXPOSE 1141/tcp # P2P
-EXPOSE 8311/tcp # RPC
-EXPOSE 8105/tcp # Testnet
+EXPOSE 1141/tcp
+EXPOSE 8311/tcp
+EXPOSE 8105/tcp
